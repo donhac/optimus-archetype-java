@@ -1,5 +1,5 @@
-# moria-archetype-java
-a maven archetype for moria service.
+# stonehenge-archetype-java
+a maven archetype for stonehenge service.
 
 ## generate project from archetype
 
@@ -8,9 +8,9 @@ a maven archetype for moria service.
 with interactive mode
 
 ```
-mvn archetype:generate                                      \
-  -DarchetypeGroupId=io.moria                           \
-  -DarchetypeArtifactId=moria-archetype-java  \
+mvn archetype:generate                             \
+  -DarchetypeGroupId=com.github.stonehenge         \
+  -DarchetypeArtifactId=stonehenge-archetype-java  \
   -DarchetypeVersion=1.0.0
 ```
 
@@ -21,12 +21,12 @@ you will required to input groupId, artifactId for your new project.
 without interactive mode
 
 ```
-mvn archetype:generate                                      \
-  -DarchetypeGroupId=io.moria                           \
-  -DarchetypeArtifactId=moria-archetype-java  \
-  -DarchetypeVersion=1.0.0                                   \
-  -DgroupId=x.y                                             \
-  -DartifactId=a                                            \
+mvn archetype:generate                             \
+  -DarchetypeGroupId=com.github.stonehenge         \
+  -DarchetypeArtifactId=stonehenge-archetype-java  \
+  -DarchetypeVersion=1.0.0                         \
+  -DgroupId=x.y                                    \
+  -DartifactId=a                                   \
   -DarchetypeCatalog=local
 ```
 
