@@ -9,7 +9,7 @@ with interactive mode
 
 ```
 mvn archetype:generate                             \
-  -DarchetypeGroupId=com.github.stonehenge         \
+  -DarchetypeGroupId=com.github.donhac             \
   -DarchetypeArtifactId=stonehenge-archetype-java  \
   -DarchetypeVersion=1.0.0
 ```
@@ -22,7 +22,7 @@ without interactive mode
 
 ```
 mvn archetype:generate                             \
-  -DarchetypeGroupId=com.github.stonehenge         \
+  -DarchetypeGroupId=com.github.donhac             \
   -DarchetypeArtifactId=stonehenge-archetype-java  \
   -DarchetypeVersion=1.0.0                         \
   -DgroupId=x.y                                    \
