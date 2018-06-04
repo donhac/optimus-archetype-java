@@ -80,12 +80,12 @@
 
     <distributionManagement>
         <repository>
-            <id>central-release</id>
+            <id>oss</id>
             <name>User Project Release</name>
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
         </repository>
         <snapshotRepository>
-            <id>central-snapshots</id>
+            <id>oss</id>
             <name>User Project SNAPSHOTS</name>
             <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
