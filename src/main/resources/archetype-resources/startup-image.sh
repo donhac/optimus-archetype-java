@@ -32,7 +32,7 @@ docker run -d --restart=on-failure:5 --privileged \
     -w /home \
     -v $PWD/logs:/home/logs \
     -p 8080:8080 \
-    --name ${artifactId} dtyunxi/${artifactId} \
+    --name ${artifactId} deep/${artifactId} \
     java \
         -Djava.security.egd=file:/dev/./urandom \
         -Duser.timezone=Asia/Shanghai \
