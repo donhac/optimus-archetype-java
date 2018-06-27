@@ -1,12 +1,12 @@
-#{{#info}}{{title}}
+${P}{{${P}info}}{{title}}
 
 
-## {{join schemes " | "}}://{{host}}{{basePath}}
+${P}${P} {{join schemes " | "}}://{{host}}{{basePath}}
 
 
 {{description}}
 
-{{#contact}}
+{{${P}contact}}
 [**Contact the developer**](mailto:{{email}})
 {{/contact}}
 
@@ -14,67 +14,67 @@
 
 [**Terms of Service**]({{termsOfService}})
 
-{{#license}}[**{{name}}**]({{url}}){{/license}}
+{{${P}license}}[**{{name}}**]({{url}}){{/license}}
 
 {{/info}}
 
-{{#if consumes}}**Consumes:** {{join consumes ", "}}{{/if}}
+{{${P}if consumes}}**Consumes:** {{join consumes ", "}}{{/if}}
 
-{{#if produces}}**Produces:** {{join produces ", "}}{{/if}}
+{{${P}if produces}}**Produces:** {{join produces ", "}}{{/if}}
 
-{{#if securityDefinitions}}
-# Security Definitions
+{{${P}if securityDefinitions}}
+${P} Security Definitions
 {{/if}}
 {{> security}}
 
-# APIs
+${P} APIs
 
-{{#each paths}}
-## {{@key}}
-{{#this}}
-{{#get}}
-### GET
+{{${P}each paths}}
+${P}${P} {{@key}}
+{{${P}this}}
+{{${P}get}}
+${P}${P}${P} GET
 {{> operation}}
 {{/get}}
 
-{{#put}}
-### PUT
+{{${P}put}}
+${P}${P}${P} PUT
 {{> operation}}
 {{/put}}
 
-{{#post}}
-### POST
+{{${P}post}}
+${P}${P}${P} POST
 
 {{> operation}}
 
 {{/post}}
 
-{{#delete}}
-### DELETE
+{{${P}delete}}
+${P}${P}${P} DELETE
 {{> operation}}
 {{/delete}}
 
-{{#option}}
-### OPTION
+{{${P}option}}
+${P}${P}${P} OPTION
 {{> operation}}
 {{/option}}
 
-{{#patch}}
-### PATCH
+{{${P}patch}}
+${P}${P}${P} PATCH
 {{> operation}}
 {{/patch}}
 
-{{#head}}
-### HEAD
+{{${P}head}}
+${P}${P}${P} HEAD
 {{> operation}}
 {{/head}}
 
 {{/this}}
 {{/each}}
 
-# Definitions
-{{#each definitions}}
-## <a name="/definitions/{{key}}">{{@key}}</a>
+${P} Definitions
+{{${P}each definitions}}
+${P}${P} <a name="/definitions/{{key}}">{{@key}}</a>
 
 <table border="1">
     <tr>
@@ -84,22 +84,22 @@
         <th>description</th>
         <th>example</th>
     </tr>
-    {{#each this.properties}}
+    {{${P}each this.properties}}
         <tr>
             <td>{{@key}}</td>
             <td>
-                {{#ifeq type "array"}}
-                {{#items.$ref}}
+                {{${P}ifeq type "array"}}
+                {{${P}items.$ref}}
                     {{type}}[<a href="{{items.$ref}}">{{basename items.$ref}}</a>]
                 {{/items.$ref}}
                 {{^items.$ref}}{{type}}[{{items.type}}]{{/items.$ref}}
                 {{else}}
-                    {{#$ref}}<a href="{{$ref}}">{{basename $ref}}</a>{{/$ref}}
-                    {{^$ref}}{{type}}{{#format}} ({{format}}){{/format}}{{/$ref}}
+                    {{${P}$ref}}<a href="{{$ref}}">{{basename $ref}}</a>{{/$ref}}
+                    {{^$ref}}{{type}}{{${P}format}} ({{format}}){{/format}}{{/$ref}}
                 {{/ifeq}}
             </td>
-            <td>{{#required}}required{{/required}}{{^required}}optional{{/required}}</td>
-            <td>{{#description}}{{{description}}}{{/description}}{{^description}}-{{/description}}</td>
+            <td>{{${P}required}}required{{/required}}{{^required}}optional{{/required}}</td>
+            <td>{{${P}description}}{{{description}}}{{/description}}{{^description}}-{{/description}}</td>
             <td>{{example}}</td>
         </tr>
     {{/each}}

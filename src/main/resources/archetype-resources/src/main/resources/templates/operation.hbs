@@ -1,30 +1,30 @@
-{{#deprecated}}-deprecated-{{/deprecated}}
+{{${P}deprecated}}-deprecated-{{/deprecated}}
 <a id="{{operationId}}">{{summary}}</a>
 
 {{description}}
 
-{{#if externalDocs.url}}{{externalDocs.description}}. [See external documents for more details]({{externalDocs.url}})
+{{${P}if externalDocs.url}}{{externalDocs.description}}. [See external documents for more details]({{externalDocs.url}})
 {{/if}}
 
-{{#if security}}
-#### Security
+{{${P}if security}}
+${P}${P}${P}${P} Security
 {{/if}}
 
-{{#security}}
-{{#each this}}
+{{${P}security}}
+{{${P}each this}}
 * {{@key}}
-{{#this}}   * {{this}}
+{{${P}this}}   * {{this}}
 {{/this}}
 {{/each}}
 {{/security}}
 
-#### Request
+${P}${P}${P}${P} Request
 
-{{#if consumes}}
+{{${P}if consumes}}
 **Content-Type: ** {{join consumes ", "}}{{/if}}
 
-##### Parameters
-{{#if parameters}}
+${P}${P}${P}${P}${P} Parameters
+{{${P}if parameters}}
 <table border="1">
     <tr>
         <th>Name</th>
@@ -36,38 +36,38 @@
     </tr>
 {{/if}}
 
-{{#parameters}}
+{{${P}parameters}}
 <tr>
     <th>{{name}}</th>
     <td>{{in}}</td>
-    <td>{{#if required}}yes{{else}}no{{/if}}</td>
-    <td>{{description}}{{#if pattern}} (**Pattern**: `{{pattern}}`){{/if}}</td>
+    <td>{{${P}if required}}yes{{else}}no{{/if}}</td>
+    <td>{{description}}{{${P}if pattern}} (**Pattern**: `{{pattern}}`){{/if}}</td>
     <td> - </td>
-{{#ifeq in "body"}}
+{{${P}ifeq in "body"}}
     <td>
-    {{#ifeq schema.type "array"}}Array[<a href="{{schema.items.$ref}}">{{basename schema.items.$ref}}</a>]{{/ifeq}}
-    {{#schema.$ref}}<a href="{{schema.$ref}}">{{basename schema.$ref}}</a> {{/schema.$ref}}
+    {{${P}ifeq schema.type "array"}}Array[<a href="{{schema.items.$ref}}">{{basename schema.items.$ref}}</a>]{{/ifeq}}
+    {{${P}schema.$ref}}<a href="{{schema.$ref}}">{{basename schema.$ref}}</a> {{/schema.$ref}}
     </td>
 {{else}}
-    {{#ifeq type "array"}}
+    {{${P}ifeq type "array"}}
             <td>Array[{{items.type}}] ({{collectionFormat}})</td>
     {{else}}
-            <td>{{type}} {{#format}}({{format}}){{/format}}</td>
+            <td>{{type}} {{${P}format}}({{format}}){{/format}}</td>
     {{/ifeq}}
 {{/ifeq}}
 </tr>
 {{/parameters}}
-{{#if parameters}}
+{{${P}if parameters}}
 </table>
 {{/if}}
 
 
-#### Response
+${P}${P}${P}${P} Response
 
-{{#if produces}}**Content-Type: ** {{join produces ", "}}{{/if}}
+{{${P}if produces}}**Content-Type: ** {{join produces ", "}}{{/if}}
 
 
 | Status Code | Reason      | Response Model |
 |-------------|-------------|----------------|
-{{#each responses}}| {{@key}}    | {{description}} | {{#schema.$ref}}<a href="{{schema.$ref}}">{{basename schema.$ref}}</a>{{/schema.$ref}}{{#ifeq schema.type "array"}}Array[<a href="{{schema.items.$ref}}">{{basename schema.items.$ref}}</a>]{{/ifeq}}{{^schema}} - {{/schema}}|
+{{${P}each responses}}| {{@key}}    | {{description}} | {{${P}schema.$ref}}<a href="{{schema.$ref}}">{{basename schema.$ref}}</a>{{/schema.$ref}}{{${P}ifeq schema.type "array"}}Array[<a href="{{schema.items.$ref}}">{{basename schema.items.$ref}}</a>]{{/ifeq}}{{^schema}} - {{/schema}}|
 {{/each}}
