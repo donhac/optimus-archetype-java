@@ -4,7 +4,7 @@
 
     <groupId>com.github.donhac</groupId>
     <artifactId>stonehenge-archetype-java</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packaging>jar</packaging>
 
     <name>stonehenge-archetype-java</name>
@@ -105,27 +105,27 @@
     </pluginRepositories>
 
     <distributionManagement>
-        <repository>
-            <id>depick</id>
-            <name>User Project Release</name>
-            <url>http://47.106.70.25/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>depick</id>
-            <name>User Project SNAPSHOTS</name>
-            <url>http://47.106.70.25/repository/maven-snapshots/</url>
-        </snapshotRepository>
-
         <!--<repository>-->
-            <!--<id>oss</id>-->
+            <!--<id>depick</id>-->
             <!--<name>User Project Release</name>-->
-            <!--<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>-->
+            <!--<url>http://47.106.70.25/repository/maven-releases/</url>-->
         <!--</repository>-->
         <!--<snapshotRepository>-->
-            <!--<id>oss</id>-->
+            <!--<id>depick</id>-->
             <!--<name>User Project SNAPSHOTS</name>-->
-            <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+            <!--<url>http://47.106.70.25/repository/maven-snapshots/</url>-->
         <!--</snapshotRepository>-->
+
+        <repository>
+            <id>oss</id>
+            <name>User Project Release</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <snapshotRepository>
+            <id>oss</id>
+            <name>User Project SNAPSHOTS</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
