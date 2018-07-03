@@ -33,6 +33,7 @@
 				<include>Dockerfile</include>
 				<include>startup-code.sh</include>
 				<include>startup-image.sh</include>
+				<include>.gitignore</include>
 			</includes>
 		</fileSet>
 	</fileSets>
