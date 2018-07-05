@@ -25,7 +25,7 @@
     <!--<dubbo:annotation package="com.foreveross.test" />-->
 
 
-    <dubbo:protocol id="dubbo" name="dubbo" serialization="java" optimizer="${package}.service.optimizers.SerializationOptimizerImpl"/>
+    <dubbo:protocol id="dubbo" name="dubbo" serialization="kryo" optimizer="${package}.service.optimizers.SerializationOptimizerImpl"/>
     <!--<dubbo:protocol name="dubbo" serialization="fst" optimizer="com.alibaba.dubbo.demo.SerializationOptimizerImpl"/>-->
     <!--<dubbo:protocol name="dubbo" serialization="nativejava"/>-->
     <!--<dubbo:protocol name="dubbo" serialization="hessian2"/>-->
@@ -47,7 +47,7 @@
     <!--<dubbo:protocol name="rest" port="8888" server="tjws" contextpath="services"/>-->
 
     <!-- use the external tomcat or other server with the servlet approach; the port and contextpath must be exactly the same as those in external server -->
-    <dubbo:protocol id="rest" name="rest" server="servlet" serialization="kryo" extension="${package}.service.extension.TraceInterceptor,
+    <dubbo:protocol id="rest" name="rest" server="servlet" extension="${package}.service.extension.TraceInterceptor,
            ${package}.service.extension.TraceFilter,
 	       ${package}.service.extension.ClientTraceFilter,
 	       ${package}.service.extension.DynamicTraceBinding,
