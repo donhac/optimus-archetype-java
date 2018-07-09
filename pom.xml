@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.donhac</groupId>
-    <artifactId>stonehenge-archetype-java</artifactId>
-    <version>1.0.9</version>
+    <artifactId>optimus-archetype-java</artifactId>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
-    <name>stonehenge-archetype-java</name>
+    <name>optimus-archetype-java</name>
     <description>a maven archetype for the microService of java</description>
-    <url>https://github.com/donhac/stonehenge-archetype-java</url>
+    <url>https://github.com/donhac/optimus-archetype-java</url>
 
     <developers>
         <developer>
@@ -26,9 +26,9 @@
     </licenses>
 
     <scm>
-        <connection>https://github.com/donhac/stonehenge-archetype-java</connection>
+        <connection>https://github.com/donhac/optimus-archetype-java</connection>
         <developerConnection>https://gitee.com/vector-Maggie</developerConnection>
-        <url>https://github.com/donhac/stonehenge-archetype-java.git</url>
+        <url>https://github.com/donhac/optimus-archetype-java.git</url>
     </scm>
 
     <build>

@@ -1,5 +1,5 @@
-# stonehenge-archetype-java
-a maven archetype for stonehenge service.
+# optimus-archetype-java
+a maven archetype for optimus service.
 
 ## generate project from archetype
 
@@ -10,7 +10,7 @@ with interactive mode
 ```
 mvn archetype:generate                             \
   -DarchetypeGroupId=com.github.donhac             \
-  -DarchetypeArtifactId=stonehenge-archetype-java  \
+  -DarchetypeArtifactId=optimus-archetype-java  \
   -DarchetypeVersion=1.0.0
 ```
 
@@ -23,7 +23,7 @@ without interactive mode
 ```
 mvn archetype:generate                             \
   -DarchetypeGroupId=com.github.donhac             \
-  -DarchetypeArtifactId=stonehenge-archetype-java  \
+  -DarchetypeArtifactId=optimus-archetype-java  \
   -DarchetypeVersion=1.0.0                         \
   -DgroupId=x.y                                    \
   -DartifactId=a                                   \
